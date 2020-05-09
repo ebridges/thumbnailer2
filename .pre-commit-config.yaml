@@ -1,0 +1,22 @@
+repos:
+  -   repo: https://github.com/psf/black
+      rev: 19.3b0
+      hooks:
+      - id: black
+        language_version: python3.7
+        args: [
+          --skip-string-normalization
+        ]
+  -   repo: https://github.com/pre-commit/pre-commit-hooks
+      rev: v2.3.0
+      hooks:
+      - id: check-ast
+      - id: check-case-conflict
+      - id: check-json
+      - id: check-toml
+      - id: detect-aws-credentials
+      - id: detect-private-key
+      - id: double-quote-string-fixer
+      - id: end-of-file-fixer
+      - id: pretty-format-json
+      - id: trailing-whitespace
